@@ -109,7 +109,7 @@ export default function TransferDialog({
                                     {filteredHospitals.map((hospital) => (
                                         <CommandItem
                                             key={hospital.id}
-                                            onSelect={() => setSelectedHospital(hospital)}
+                                            onSelect={() => setSelectedHospital(selectedHospital?.id === hospital.id ? null : hospital)}
                                             className={cn(
                                                 "flex items-center justify-between p-3 cursor-pointer transition-colors",
                                                 selectedHospital?.id === hospital.id 
